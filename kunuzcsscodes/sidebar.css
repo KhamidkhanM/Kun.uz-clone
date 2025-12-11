@@ -1,0 +1,136 @@
+/* SIDEBAR */
+.sidebar {
+    grid-area: sidebar;
+    padding: 10px;
+}
+
+
+.sidebar-title {
+    font-weight: 800;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-family: inter, serif;
+}
+
+
+
+
+.sidebar .news-1:nth-last-child(2) {
+    border-bottom: none !important;
+}
+
+.sidebar .main-news {
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 5px;
+
+}
+
+.sidebar .news-info {
+    font-size: 12px;
+}
+
+.allnews {
+    display: flex;
+    align-items: center;
+    margin-left: 75px;
+    margin-top: 10px;
+    padding: 0 !important;
+    gap: 8px;
+    padding-top: 10px;
+    position: relative;
+    overflow: hidden;
+    width: fit-content;
+    cursor: pointer;
+    height: 32px;
+    position: relative;
+}
+
+/* Blue circle button */
+.allnews-button {
+    color: white;
+    font-size: 14px;
+    font-family: inter, serif;
+    background-color: rgb(9, 9, 127);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+/* "All news" text next to button */
+.allnews-text {
+    font-weight: 600;
+    font-size: 14px;
+    z-index: 2;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+/* Blue background that appears on hover */
+.allnews::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 32px;
+    background-color: rgb(9, 9, 127);
+    border-radius: 50px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Text that appears on hover */
+.allnews::before {
+    content: '→ All news';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 32px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.allnews::before {
+    content: '→ All news';
+}
+
+.allnews::before {
+    letter-spacing: 0.5px;
+}
+
+.allnews:hover .allnews-button {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.allnews:hover .allnews-text {
+    opacity: 0;
+    transform: translateX(10px);
+}
+
+.allnews:hover::after {
+    opacity: 1;
+}
+
+.allnews:hover::before {
+    opacity: 1;
+}

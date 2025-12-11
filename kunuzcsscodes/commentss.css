@@ -1,0 +1,27 @@
+.bottom-side {
+    display: flex !important;
+    align-items: center !important;
+    margin-top: 60px;
+    margin-left: 40px;
+
+}
+
+.down-buttons {
+    display: flex;
+    gap: 40px;
+    margin-left: 850px;
+    transition: color 0.3s ease;
+}
+
+
+
+
+.kunuz-grey {
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.down-buttons:hover {
+    cursor: pointer;
+    color: rgb(9, 9, 127);
+}
